@@ -13,5 +13,4 @@ public class SingleTonService {
         return instance;
     }
 
-
 }
