@@ -3,6 +3,7 @@ package hello.core.discount;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +15,7 @@ public class DiscountPolicyFactory {
 
     public DiscountPolicyFactory(List<DiscountPolicy> discountPolicies) {
         this.discountPolicyMap = discountPolicies.stream()
-                .collect(Collectors.toMap(DiscountPolicy::code, discountPolicy -> discountPolicy));
+                .collect(Collectors.toMap(DiscountPolicy::code, Function.identity()));
     }
 
     public DiscountPolicy createBean(DiscountPolicyCode code) {
