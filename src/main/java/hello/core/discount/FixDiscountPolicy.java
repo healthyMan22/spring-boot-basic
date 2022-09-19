@@ -18,4 +18,12 @@ public class FixDiscountPolicy implements DiscountPolicy {
 
         return 0;
     }
+
+
+    @Override
+    public DiscountPolicyCode code() {
+        return DiscountPolicyCode.FIX;
+    }
+
+
 }
