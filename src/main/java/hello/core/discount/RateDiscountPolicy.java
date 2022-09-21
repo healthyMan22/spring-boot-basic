@@ -6,7 +6,7 @@ import hello.core.member.Member;
 import org.springframework.stereotype.Component;
 
 @MainDiscountPolicy
-@Component
+//@Component
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private int discountPercent = 10;

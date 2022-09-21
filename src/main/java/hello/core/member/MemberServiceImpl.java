@@ -12,6 +12,9 @@ public class MemberServiceImpl implements MemberService{
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
+    public MemberServiceImpl(MemberRepository memberRepository, String message) {
+        this.memberRepository = memberRepository;
+    }
 
 
     @Override
